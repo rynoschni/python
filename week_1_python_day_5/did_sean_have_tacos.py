@@ -2,7 +2,6 @@ meal = {
     'drink': 'beer',
     'appetizer': 'chips',
     'entree': 'tacos',
-    'dessert': 'churros',
 }
 
 if 'dessert' in meal: 

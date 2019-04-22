@@ -8,5 +8,6 @@ meal = {
 print(meal)
 
 meal['drink'] = 'tea'
+del meal['dessert']
 
 print(meal)

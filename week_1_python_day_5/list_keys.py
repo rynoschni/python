@@ -19,8 +19,8 @@ digitalcrafts = {
 countries = digitalcrafts.keys()
 us_cities = digitalcrafts['US'].keys()
 
-print(countries)
-print(us_cities)
+#print(countries)
+#print(us_cities)
 
 # OR, you can iterate over the dictionary in a FOR loop
 

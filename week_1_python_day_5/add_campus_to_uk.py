@@ -9,6 +9,10 @@ digitalcrafts = {
     }
 }
 
-print(digitalcrafts)
+digitalcrafts['UK'] = {}
 
-# print(digitalcrafts['US']['Georgia']['Atlanta'])
+digitalcrafts['UK']['Surrey'] = {
+    'Croydon' : '420 High Street'
+}
+
+print(digitalcrafts)
