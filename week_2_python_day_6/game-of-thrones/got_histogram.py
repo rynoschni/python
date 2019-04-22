@@ -36,7 +36,7 @@ def allegiances_histogram(character_list):
                 house_name = houses[a]
                 if house_name not in house_dict.keys():
                     house_dict[house_name] = 1
-                if house_name in house_dict.keys():
+                elif house_name in house_dict.keys():
                     house_dict[house_name] += 1
 
     for h in house_dict.keys():
@@ -46,5 +46,5 @@ def allegiances_histogram(character_list):
 ugly_histogram = make_house_histogram(characters)
 pretty_histogram = allegiances_histogram(characters)
 
-# pprint(ugly_histogram)
+## pprint(ugly_histogram)
 pprint(pretty_histogram)
