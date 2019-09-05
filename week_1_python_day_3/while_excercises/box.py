@@ -28,7 +28,7 @@ while y < height:
 
         # If we are at an edge, draw a star
         if is_top or is_bottom or is_left or is_right:
-            print('⭐️ ', end='')
+            print('x ', end='')
         # Otherwise, draw a space
         else:
             print('  ', end='')
