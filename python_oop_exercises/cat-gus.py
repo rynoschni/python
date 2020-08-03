@@ -5,13 +5,11 @@ class Cat:
         self.name = name
         self.age = age
 
-    # instance method
-    def description(self):
-        return "{} is {}".format(self.name, self.age)
+    def __str__(self):
+        return "%s is %d" % (self.name, self.age)
 
 
 gus = Cat("Gus", 9)
 beans = Cat("Beans", 10)
-# print(Cat.description())
-print(gus.description())
-print(beans.description())
+
+print(gus)
