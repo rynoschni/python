@@ -1,13 +1,13 @@
 import random
 
 eightball_choices = {
-    "option1": "outlook unclear",
-    "option2": "looks good to me",
-    "option3": "Foo",
-    "option4": "Bar",
-    "option5": "Baz"
+    "1": "outlook unclear",
+    "2": "looks good to me",
+    "3": "Foo",
+    "4": "Bar",
+    "5": "Baz"
 }
 
-random_selection = key, val = random.choice(list(eightball_choices.items()))
+random_selection = eightball_choices[str(random.randint(1,5))]
 
-print(random_selection[1])
+print(random_selection)
