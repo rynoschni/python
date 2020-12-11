@@ -1,9 +1,8 @@
 # size = 5
-width = int(input("width? "))
-height = int(input("height? "))
-# width = 10
-# height = 10
-
+# width = int(input("width? "))
+#height = int(input("height? "))
+width = 10
+height = 10
 
 # let's use 2 nested loops:
 # - an outer loop that draws rows
@@ -21,8 +20,8 @@ while y < height:
         # Draw!
         print('*', end='')
 
-        # Move our inner loop closer to the end    
-        x = x + 1
+        # Move our inner loop closer to the end
+        x += 1
 
     # When the inner loop is finished, that means it
     # drew a row. We print() to make it start a new line.

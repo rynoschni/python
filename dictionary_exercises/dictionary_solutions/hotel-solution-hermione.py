@@ -1,8 +1,3 @@
-
-
-import my_functions     #test for int
-import pprint
-
 hotel = {
   1: {
     101: ['George Jefferson', 'Wheezy Jefferson'],
@@ -14,29 +9,29 @@ hotel = {
     333: ['Neo', 'Trinity', 'Morpheus']
   }
 }
+
 def get_room_and_floor():
     floor = None
     room = None
     while floor == None:
-        floor = my_functions.convert_to_int(input('What floor number? '))
+        floor = int(input('What floor number? '))
         if floor != None:
             break
         else:
             print('please enter a valid floor number')
     while room == None:
-        room = my_functions.convert_to_int(input("What room number? "))
+        room = int(input("What room number? "))
         if room != None:
             break
         else:
             print("Enter a valid room number, please")
-    return floor,room 
-
+    return floor,room
 
 def get_occupants():
     occupants = None
     names = []
     while occupants == None:
-        occupants = my_functions.convert_to_int(input("How many people are staying in the room?"))
+        occupants = int(input("How many people are staying in the room?"))
         if occupants != None:
             if occupants > 6:
                 print("You can't have more than 6 people in one room - FIRE CODE!")
@@ -52,13 +47,11 @@ def room_empty(floor,room):
     if floor in hotel.keys():        #check that the floor exists (1,2,3 currently)
         if room in hotel[floor].keys():  #check if that room is occupied
             return False
-            
         else:
             return True        #room doesn't exist
     else:
         return True            #floor doesn't exist
     return False                #something else wrong
-
 
 def clear_room(floor,room):
     if floor in hotel.keys():        #check that the floor exists (1,2,3 currently)
@@ -71,16 +64,15 @@ def clear_room(floor,room):
     else:
         print("That floor doesn't exist.  Please start over")
         return False
-          
+
 def check_in(location,people):      #only called with valid_room
     #if the floor doesn't exist yet, create it
     if location[0] in hotel.keys():     #floor exists
         hotel[location[0]][location[1]] = people[1]     #create room
-    else:       
+    else:
         hotel[location[0]] = {}         #create floor
         hotel[location[0]][location[1]] = people[1]     #create room
     return True     #passed
-
 
 def check_in_or_out():
     checkinout = None
@@ -94,6 +86,7 @@ def check_in_or_out():
     return None    #it shuld never get here
 
 run = True
+
 while run:          #control-c to exit.  it will continue to run
     checkinout = check_in_or_out()      #are they checking in or out
     valid_room = False
@@ -112,8 +105,5 @@ while run:          #control-c to exit.  it will continue to run
             valid_room = clear_room(location[0],location[1])    # True or False
         else:
             break
-    pprint.pprint(hotel)
-
-# print(location)
-# print (hotel.keys())
-
+    #pprint.pprint(hotel)
+    print(hotel)
